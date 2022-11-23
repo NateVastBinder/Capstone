@@ -1,0 +1,14 @@
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    justify-content: left;
+    align-items: left;
+}
+
+.right {
+    justify-content: center;
+    align-items: left;
+}
