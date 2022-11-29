@@ -1,0 +1,33 @@
+.free-space {
+    height: 200px;
+}
+
+.workoutSpacing {
+    height: 50px;
+}
+
+.sixth-width{
+    width: 16.6%;
+}
+
+.priority-width{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.box {
+    margin-top: 60px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #2C3531;
+    background-color:#d1e8e2 ;
+    
+
+}
+
+.background {
+background-color: #2C3531;
+}
+

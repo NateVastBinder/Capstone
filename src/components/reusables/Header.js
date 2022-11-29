@@ -27,7 +27,7 @@ const Header = (props) => {
                     <div class='third-width center text'>
                         <a href="/" className='text-color'>{props.headerText}</a>
                     </div>
-                    <div className='third-width center'>
+                    <div className='third-width center '>
                         <div class="wrap button-left ">
                             <a href="/SignUp" class="button">Sign up</a>
                         </div>
@@ -47,12 +47,13 @@ const Header = (props) => {
                         </div>
                     </div>
                     <div class='third-width center text'>
-                        <a href="/" className='text-color'>{props.headerText}</a>
+                        <a href="/" className='text'>{props.headerText}</a>
                     </div>
                     <div className='third-width center'>
                         <div class="wrap button-left ">
                             <button class="button" onClick={clickHandler}>Logout </button>
                         </div>
+
 
                     </div>
                 </div>

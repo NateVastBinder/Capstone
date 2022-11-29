@@ -2,7 +2,7 @@ import Header from "../../components/reusables/Header";
 import {useState} from "react"
 import { useNavigate } from "react-router";
 import axios from 'axios'
-import {getUserByEmail} from '../makeRequests'
+// import {getUserByEmail} from '../../makeRequests'
 
 const SignIn = () => {
 
@@ -25,7 +25,7 @@ const SignIn = () => {
         axios.post(`http://localhost:8080/signIn`, user)
         .then((response) => {
             localStorage.setItem("email", response.data.email)
-            navigator('/')
+            navigator('/UserPortal')
         }) .catch((e) => {
             console.log(e.response.data.message)
         })
