@@ -5,27 +5,12 @@ import "../../css/pages/Priority.css"
 
 
 
-const ShoulderPriority = (props) => {
+const LegsPriority = (props) => {
 
-    const [user, setUser] = useState({})
     const [form, setForm] = useState('')
     const [bodyPart, setBodyPart] = useState("")
     const [muscleGroupList, setMuscleGroupList] = useState([])
     const [button, setButton] = useState(false)
-
-
-    useEffect(() => {
-        if (localStorage.getItem("email")) {
-            axios.get(`http://localhost:8080/getUserByEmail/${localStorage.getItem("email")}`)
-                .then((response) => {
-                    console.log(response.data)
-                    setUser(response.data)
-                })
-                .catch((e) => {
-                    console.log(e)
-                })
-        }
-    }, [])
 
     const submitHandler = (event) => {
         const muscle = event.target.value
@@ -46,7 +31,7 @@ const ShoulderPriority = (props) => {
         axios.post(`http://localhost:8080/AddWorkout/${bodyPart}`, props.user)
         .then((response) => {
             console.log(response.data)
-            setUser(response.data)
+            props.setUser(response.data)
         }).catch((e) => {
             console.log(e)
         })
@@ -110,4 +95,4 @@ const ShoulderPriority = (props) => {
     )
 }
 
-export default ShoulderPriority
+export default LegsPriority

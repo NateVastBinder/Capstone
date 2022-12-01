@@ -11,70 +11,54 @@ import "../../css/pages/CreateWorkout.css"
 
 
 
-const CreateWorkout = () => {
+const CreateWorkout = (props) => {
 
-    const [user, setUser] = useState({})
     const [form, setForm] = useState('')
-
-
-    
-    useEffect(() => {
-        if (localStorage.getItem("email")) {
-            axios.get(`http://localhost:8080/getUserByEmail/${localStorage.getItem("email")}`)
-                .then((response) => {
-                    console.log(response.data)
-                    setUser(response.data)
-                })
-                .catch((e) => {
-                    console.log(e)
-                })
-        }
-    }, [])
     
     const handleView =(event) => {
         setForm(event.target.value)
     }
 
-    const renderForm = () => { console.log(form)
+    const renderForm = () => {
         switch(form) {
             case 'Back':
             return (
-                < BackPriority/>
+                < BackPriority user={props.user} setUser={props.setUser} />
         )
         break;
         }
         switch(form) {
             case 'Chest':
             return (
-                < PriorityChest/>
+                < PriorityChest user={props.user} setUser={props.setUser} />
         )
         break;
         }
         switch(form) {
             case 'Arms':
             return (
-                < ArmsPriority/>
+                < ArmsPriority user={props.user} setUser={props.setUser} />
         )
         break;
         }
         switch(form) {
             case 'Shoulder':
             return (
-                <ShoulderPriority/>
+                <ShoulderPriority user={props.user} setUser={props.setUser} />
         )
         break;
         }
         switch(form) {
             case 'Abs':
             return (
-                < AbsPriority/>
+                < AbsPriority user={props.user} setUser={props.setUser} />
         )
         break;
         }
         switch(form) {
             case 'Legs':
             return (
-                < LegsPriority user={user} />
+                < LegsPriority user={props.user} setUser={props.setUser} />
         )
         break;
         }

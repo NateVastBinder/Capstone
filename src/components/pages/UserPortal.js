@@ -16,6 +16,7 @@ const UserPortal = () => {
         if(localStorage.getItem("email")) {
             axios.get(`http://localhost:8080/getUserByEmail/${localStorage.getItem("email")}`)
             .then((response) => {
+                console.log("HERE")
                 console.log(response.data)
                 setUser(response.data)
             })
@@ -23,8 +24,9 @@ const UserPortal = () => {
                 console.log(e)
             })
         }
-    }, [])
+    }, [form])
     const handleView =(event) => {
+
         setForm(event.target.value)
     }
 
@@ -32,14 +34,15 @@ const UserPortal = () => {
         switch(form) {
             case 'create-workout':
             return (
-                < CreateWorkout/>
+                < CreateWorkout user={user} setUser={setUser} />
         )
         break;
         }
         switch(form) {
             case 'account':
             return (
-                < UserAccount/>
+                < UserAccount user={user} setUser={setUser}/>
+
         )
         break;
         }
