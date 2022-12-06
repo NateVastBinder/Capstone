@@ -35,7 +35,7 @@ function App() {
     <Route exact path='/' element = {<Home />} />
     <Route path = '/SignUp' element = {<SignUp />} />
     <Route path = '/Login' element = {<Login />} />
-    <Route path = '/UserPortal' element = {<UserPortal/>} />
+    <Route path = '/UserPortal' element = {<UserPortal user={user} setUser = {setUser}/>} />
     <Route path = '/UserAccount' element = {<UserAccount/>} />
  </Routes>
   //  </PageWrapper>

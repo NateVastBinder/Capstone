@@ -14,81 +14,69 @@ import "../../css/pages/CreateWorkout.css"
 const CreateWorkout = (props) => {
 
     const [form, setForm] = useState('')
-    
-    const handleView =(event) => {
+
+    const handleView = (event) => {
         setForm(event.target.value)
     }
 
     const renderForm = () => {
-        switch(form) {
+        switch (form) {
             case 'Back':
-            return (
-                < BackPriority user={props.user} setUser={props.setUser} />
-        )
-        break;
+                return (
+                    < BackPriority user={props.user} setUser={props.setUser} />
+                )
+                break;
         }
-        switch(form) {
+        switch (form) {
             case 'Chest':
-            return (
-                < PriorityChest user={props.user} setUser={props.setUser} />
-        )
-        break;
+                return (
+                    < PriorityChest user={props.user} setUser={props.setUser} />
+                )
+                break;
         }
-        switch(form) {
+        switch (form) {
             case 'Arms':
-            return (
-                < ArmsPriority user={props.user} setUser={props.setUser} />
-        )
-        break;
+                return (
+                    < ArmsPriority user={props.user} setUser={props.setUser} />
+                )
+                break;
         }
-        switch(form) {
+        switch (form) {
             case 'Shoulder':
-            return (
-                <ShoulderPriority user={props.user} setUser={props.setUser} />
-        )
-        break;
+                return (
+                    <ShoulderPriority user={props.user} setUser={props.setUser} />
+                )
+                break;
         }
-        switch(form) {
+        switch (form) {
             case 'Abs':
-            return (
-                < AbsPriority user={props.user} setUser={props.setUser} />
-        )
-        break;
+                return (
+                    < AbsPriority user={props.user} setUser={props.setUser} />
+                )
+                break;
         }
-        switch(form) {
+        switch (form) {
             case 'Legs':
-            return (
-                < LegsPriority user={props.user} setUser={props.setUser} />
-        )
-        break;
+                return (
+                    < LegsPriority user={props.user} setUser={props.setUser} />
+                )
+                break;
         }
-     }
+    }
 
 
 
     return (
-    <div className="flex-col width">
-        <div className="flex-row main-body ">
-            <div className="center flex-col sixth-width">
-            <button className="button" value = 'Back' onClick={handleView}>Back</button>
+        <div className="flex-row full-width left">
+            <div className="flex-col workout-body">
+                <button className="workout-button" value='Back' onClick={handleView}>Back</button>
+                <button className="workout-button" value='Chest' onClick={handleView}>Chest</button>
+                <button className="workout-button" value='Arms' onClick={handleView}>Arms</button>
+                <button className="workout-button" value='Shoulder' onClick={handleView}>Shoulder</button>
+                <button className="workout-button" value='Abs' onClick={handleView}>Abs</button>
+                <button className="workout-button" value='Legs' onClick={handleView}>Legs</button>
             </div>
-            <div className="center flex-col sixth-width">
-            <button className="button" value = 'Chest' onClick={handleView}>Chest</button>
-            </div>
-            <div className="center flex-col sixth-width">
-            <button className="button" value = 'Arms' onClick={handleView}>Arms</button>
-            </div>
-            <div className="center flex-col sixth-width">
-            <button className="button" value = 'Shoulder' onClick={handleView}>Shoulder</button>
-            </div>
-            <div className="center flex-col sixth-width">
-            <button className="button" value = 'Abs' onClick={handleView}>Abs</button>
-            </div>
-            <div className="center flex-col sixth-width">
-            <button className="button" value = 'Legs' onClick={handleView}>Legs</button>
-            </div>
-            </div>
-            <div>
+            <div className="full-width ">
                 {renderForm()}
             </div>
         </div>

@@ -18,16 +18,27 @@
 }
 
 .box {
-    margin-top: 60px;
+    color: #D9B08C;
+    font-size: 30px;
+    margin-top: 250px;
+    padding: 30px;
     border-width: 2px;
+    border-radius: 10px;
     border-style: solid;
     border-color: #2C3531;
-    background-color:#d1e8e2 ;
+    background-color: rgb(92, 88, 192) ;
     
 
 }
 
-.background {
-background-color: #2C3531;
+.content-box-margins {
+    margin-right: 100px;
 }
 
+.eighty-width {
+    width: 80%;
+}
+
+.save-button {
+    
+}

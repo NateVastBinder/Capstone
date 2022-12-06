@@ -1,5 +1,16 @@
+.button-style {
+  background-color: #254e75; /* Green */
+  border: none;
+      color: #D9B08C;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+}
+
 .button {
-    background-color: #116466; /* Green */
+    background-color: rgb(92, 88, 192); /* Green */
       border: none;
       color: #D9B08C;
       padding: 15px 32px;
@@ -8,3 +19,11 @@
       display: inline-block;
       font-size: 16px;
     }
+
+    .button:hover {
+      background-color: rgb(74, 70, 154);
+      /* Green */
+      float: left;
+  }
+  
+ 
