@@ -9,6 +9,6 @@
 }
 
 .right {
-    justify-content: center;
-    align-items: left;
+    justify-content: right;
+    align-items: right;
 }

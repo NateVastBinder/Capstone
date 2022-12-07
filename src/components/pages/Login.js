@@ -31,21 +31,28 @@ const SignIn = () => {
         })
     }
 
-
+    const home = () => {
+        navigator('/')
+    }
     
 
     return (
         <div className='flex-col container'>
             <Header headerText="Log in page" user={user}/>
 
-            <div className="flex-col full-width center border">
+            <div className="flex-col full-width center border sign-up-form">
                 <label>Email</label>
                 <input placeholder="TYPE HERE" type='text' name="email" value={user.email} onChange={changeHandler} />
                 <label>Password</label>
                 <input placeholder = "TYPE HERE" type='password' name="password" value={user.password} onChange={changeHandler} />
-                <button class = "submitButton"onClick={submitHander}>SUBMIT</button>
-                <a href="/" class="homeButton">Home</a>
-
+                <div className="flex-row third-width">
+                    <div className="half-width center">
+                    <button className="button center" value='Legs' onClick={home}>Home</button>
+                    </div>
+                    <div className="half-width center">
+                    <button class = "button"onClick={submitHander}>SUBMIT</button>
+                    </div>
+                </div>
             </div>
         </div>
 

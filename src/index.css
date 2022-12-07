@@ -30,6 +30,9 @@ html, body {
   overflow: scroll;
 }
 
+.text {
+  color: #D9B08C;
+}
 
 @import url('./css/flex.css');
 @import url('./css/positions.css');

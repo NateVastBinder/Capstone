@@ -18,14 +18,14 @@ const Header = (props) => {
         if (props.user.id === undefined) {
             return (
                 <div className='flex-row header-dimensions full-width header'>
+                    <div class='third-width center text'>
+                        <a href="/" className='text-color'>{props.headerText}</a>
+                    </div>
                     <div className='third-width center'>
                         <div class="wrap button-left ">
                         </div>
                         <div class="wrap button-left ">
                         </div>
-                    </div>
-                    <div class='third-width center text'>
-                        <a href="/" className='text-color'>{props.headerText}</a>
                     </div>
                     <div className='third-width center '>
                         <div class="wrap button-left ">

@@ -1,12 +1,18 @@
 .header {
-    background-color: white;
+    background-color: rgb(92, 88, 192); /* Green */
     height: 9%;
 }
 
-.text {
+
+
+a:link {
     color: #D9B08C;
+    text-decoration: none;
+    font-size: 20px;
 
 }
+
+
 
   
 

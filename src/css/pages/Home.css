@@ -1,0 +1,57 @@
+.first-body {
+    height: 500px;
+    background-color: rgb(92, 88, 192); /* Green */
+}
+
+.second-body {
+    height: 400px;
+    background-color: rgb(92, 88, 192); /* Green */
+}
+
+.center-piece {
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.side-pieces {
+    margin-bottom: 230px;
+    font-size: 19px;
+}
+
+.or {
+    font-size: 25px;
+    margin-bottom: 230px;
+}
+
+.first-body-text {
+    font-size: 46px;
+    margin-top: 110px;
+    width: 700px;
+    margin-left: 100px;
+}
+
+.first-body-under-text {
+    font-size: 20px;
+    margin-top: 10px;
+    width: 550px;
+    margin-left: 120px;
+}
+
+.first-body-image {
+    margin-top: 50px;
+    background-image:url("https://www.hussle.com/blog/wp-content/uploads/2020/12/Gym-structure-1080x675.png");
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: cover;
+}
+
+.second-body-image {
+    margin-top: 50px;
+    background-image:url("https://runningmagazine.ca/wp-content/uploads/2020/07/Screen-Shot-2020-07-19-at-4.10.38-PM.jpg");
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+}
