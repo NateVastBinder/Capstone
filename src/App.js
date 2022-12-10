@@ -7,6 +7,7 @@ import SignUp from './components/pages/SignUp';
 import Login from './components/pages/Login'
 import UserPortal from './components/pages/UserPortal'
 import UserAccount from './components/pages/UserAccount'
+import UserHome from './components/pages/UserHome';
 import PageWrapper from './components/reusables/PageWrapper'; 
 // import  { getUserByEmail } from './makeRequests'
 
@@ -37,6 +38,7 @@ function App() {
     <Route path = '/Login' element = {<Login />} />
     <Route path = '/UserPortal' element = {<UserPortal user={user} setUser = {setUser}/>} />
     <Route path = '/UserAccount' element = {<UserAccount/>} />
+    <Route path = '/UserHome' element = {<UserHome user={user} setUser = {setUser}/>}/>
  </Routes>
   //  </PageWrapper>
   );

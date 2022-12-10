@@ -6,12 +6,13 @@ import { useNavigate } from 'react-router'
 import axios from "axios"
 import CreateWorkout from './CreateWorkout'
 import UserAccount from './UserAccount'
+import UserHome from './UserHome'
 
 
 const UserPortal = (props) => {
 
     const [user, setUser] = useState({})
-    const [form, setForm] = useState('')
+    const [form, setForm] = useState('Home')
     const navigator = useNavigate()
 
     const clickHandler = () => {
@@ -54,7 +55,16 @@ const UserPortal = (props) => {
                 )
                 break;
         }
+        switch (form) {
+            case 'Home':
+                return (
+                    < UserHome user={user} setUser={setUser} />
+
+                )
+                break;
+        }
     }
+    
 
 
 
@@ -67,13 +77,13 @@ const UserPortal = (props) => {
                 <div className="flex-col margin-bottom side-bar-width full-height full-width ">
                         <button className="button" value='create-workout' onClick={handleView}>Create Workout</button>
                         <button className="button" value='account' onClick={handleView}>Account </button>
-                        <button className="button" value='delete-cars' onClick={handleView}>Clear </button>
+                        <button className="button" value='Home' onClick={handleView}>Home </button>
                         <button class="button logout-button" onClick={clickHandler}>Logout </button>
-
                 </div>
                 <div className="full-width">
                     {renderForm()}
                 </div>
+
             </div>
 
         </div>

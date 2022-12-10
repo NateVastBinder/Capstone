@@ -26,7 +26,7 @@
   .workout-button {
         border: none;
         background-color: rgb(74, 70, 154);
-        color: #D9B08C;
+        color: white;
         padding: 15px 32px;
         margin-top: 30px;
         text-align: center;
@@ -50,7 +50,7 @@
           border: solid;
           border-width: 1px;
           border-radius: 30px;
-          color: #D9B08C;
+          color: white;
           padding: 25px 50px;
           text-align: center;
           text-decoration: none;
