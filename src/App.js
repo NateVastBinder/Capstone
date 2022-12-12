@@ -38,7 +38,7 @@ function App() {
     <Route path = '/Login' element = {<Login />} />
     <Route path = '/UserPortal' element = {<UserPortal user={user} setUser = {setUser}/>} />
     <Route path = '/UserAccount' element = {<UserAccount/>} />
-    <Route path = '/UserHome' element = {<UserHome user={user} setUser = {setUser}/>}/>
+    <Route path = '/UserHome' element = {<UserHome/>}/>
  </Routes>
   //  </PageWrapper>
   );

@@ -4,6 +4,8 @@ import '../../css/pages/UserAccount.css'
 
 const RenderAbs = (props) => {
 
+
+    const [listLength, setListLength] = useState(0)
     const [upperAbList, setUpperAbList] = useState([])
     const [obliqueList, setObliqueList] = useState([])
     const [lowerAbList, setLowerAbList] = useState([])
@@ -23,10 +25,22 @@ const RenderAbs = (props) => {
         const lowerAbList = filterLowerAbList()
         setLowerAbList(lowerAbList)
 
-    }, [])
+    }, [listLength])
+
+    const deleteFromUser = (event) => {
+
+        const muscleGroupName = event.target.name
+
+        axios.post(`http://localhost:8080/deleteMuscleGroupFromUser/${muscleGroupName}`, props.user)
+        .then((response) => {
+            props.setUser(response.data)
+        }).catch((e) => {
+            console.log(e)
+        })
+
+    }
 
     const filterUpperAbList = () => {
-        console.log(props.user)
         const list = []
         for (const muscleGroup of props.user.workouts) {
             if (muscleGroup.muscleGroupName === "Upper Ab") {
@@ -71,6 +85,7 @@ const RenderAbs = (props) => {
         } else {
             let html = upperAbList.map((object) => {
                 return (
+                    
                     <div className=" flex-row justify-center full-width">
                         <div className='flex-col full-width'>
                             <div className="flex-row full-width">
@@ -87,6 +102,7 @@ const RenderAbs = (props) => {
                 <div className="flex-col view-workouts-box">
                     <div className="center">Upper Ab</div>
                     {html}
+                    <button className="workout-button" name = "Upper_Ab" onClick={deleteFromUser} >Delete</button>
                 </div>
             )
         }
@@ -114,6 +130,7 @@ const RenderAbs = (props) => {
                 <div className="flex-col view-workouts-box">
                     <div className="center">Oblique</div>
                     {html}
+                    <button className="workout-button" onClick={deleteFromUser} >Delete</button>
                 </div>
             )
         }
@@ -141,6 +158,7 @@ const RenderAbs = (props) => {
                 <div className="flex-col view-workouts-box">
                     <div className="center">Lower Ab</div>
                     {html}
+                    <button className="workout-button" onClick={deleteFromUser} >Delete</button>
                 </div>
             )
         }

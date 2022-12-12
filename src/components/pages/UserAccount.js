@@ -10,7 +10,6 @@ import RenderAbs from "./RenderAbs.js"
 
 const UserAccount = (props) => {
 
-    const [user, setUser] = useState({})
     
     const [form, setForm] = useState('')
 

@@ -42,12 +42,23 @@ const UserHome = (props) => {
             <div className="flex-row center">
                 {`Welcome ${props.user.email}`}
             </div>
-            <div className="left">
-                <div className="flex-col view-workouts-box personal-info third-width">
+            <div className="flex-row full-width">
+                <div className="flex-col view-workouts-box personal-info third-width info-personal-info">
                     <div className="center"> Personal Information </div>
                     <div> Name : {`${props.user.fullName}`} </div>
                     <div> Email : {`${props.user.email}`} </div>
                     <div>   You have {`${props.user.workouts.length} exercises saved`} </div>
+                </div>
+            <div className="flex-col view-workouts-box workouts-for-each third-width ">
+                    <div className="center"> Workout Information </div>
+                    <div>  You have x Back workouts </div>
+                    <div>  You have x Ab workouts </div>
+                    <div>  You have x shoulder workouts </div>
+                    <div>  You have x Arms workouts </div>
+                    <div>  You have x Chest workouts </div>
+                    <div>  You have x Leg workouts </div>
+
+                    
                 </div>
             </div>
         </div>
